@@ -218,6 +218,9 @@ pub(crate) struct CameraConfig {
 
     #[serde(default = "default_false", alias = "idle", alias = "idle_disc")]
     pub(crate) idle_disconnect: bool,
+
+    #[serde(default = "default_false", alias="conn_wait")]
+    pub(crate) connect_wait: bool,
 }
 
 #[derive(Debug, Deserialize, Serialize, Validate, Clone, PartialEq, Eq, Hash)]
